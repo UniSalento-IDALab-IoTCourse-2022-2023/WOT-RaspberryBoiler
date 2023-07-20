@@ -27,4 +27,4 @@ I collegamenti con tutti i componenti del progetto sono:
 - [WOT-monitoring-fe](https://github.com/UniSalento-IDALab-IoTCourse-2022-2023/WOT-monitoring-fe)
 
 ## Descrizione del componente corrente
-Il componente corrente è il Raspberry, il quale permetterà, una volta avviato tutto il sistema, di acquisire i dati che gli vengono trasmessi dalla caldaia tramite protocollo OpenTherm e dai sensori per poi passarli al Gateway. Nel nosto caso, dato che stiamo simulando la presenza di una caldaia e dei sensori ad essa assocaiti, i dati saranno generati da degli script python.
+Il componente corrente è il Raspberry, il quale permetterà, una volta avviato tutto il sistema, di acquisire i dati che gli vengono trasmessi dalla caldaia tramite protocollo OpenTherm e dai sensori per poi passarli al Gateway. Nel nostro caso, dato che stiamo simulando la presenza di una caldaia e dei sensori ad essa associati, i dati saranno generati da degli script python.
