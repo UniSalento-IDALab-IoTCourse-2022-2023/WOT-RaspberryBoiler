@@ -30,4 +30,24 @@ I collegamenti con tutti i componenti del progetto sono:
 Il componente corrente è il Raspberry, il quale permetterà, una volta avviato tutto il sistema, di acquisire i dati che gli vengono trasmessi dalla caldaia tramite protocollo OpenTherm e dai sensori per poi passarli al Gateway. Nel nostro caso, dato che stiamo simulando la presenza di una caldaia e dei sensori ad essa associati, i dati saranno generati da degli script python.
 
 ## Avvio del sistema
-...
+### Prerequisiti
+A partire dalla versione 5.43 di BlueZ (attualmente inclusa in Raspbian Stretch), alcuni aspetti del BLE (Bluetooth Low Energy) sono ancora sperimentali. Sarà necessario aggiungere l'opzione 'Experimental' al daemon Bluetooth. Esegui i seguenti passaggi:
+1. Apri il terminale o la riga di comando sul Raspberry Pi.
+2. Digita il seguente comando per modificare il file dbus-org.bluez.service:
+    ```
+    sudo nano /etc/systemd/system/dbus-org.bluez.service
+    ```
+3. All'interno dell'editor di testo nano, cerca la riga che inizia con "ExecStart" e termina con un comando. Aggiungi l'opzione '**-E**' (che indica "Experimental") alla fine di questa riga. Dopo aver fatto la modifica, la riga dovrebbe assomigliare a questa:
+   ```
+   ExecStart=/usr/lib/bluetooth/bluetoothd -E
+   ```
+4. Dopo aver apportato questa modifica, riavvia il servizio Bluetooth con il seguente comando:
+   ```
+   sudo systemctl daemon-reload
+   sudo systemctl restart bluetooth
+   ```
+### Esecuzione
+Per avviare il server GATT è necessario eseguire il seguente script python
+```
+./GattBoiler.py
+```
