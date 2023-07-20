@@ -21,7 +21,7 @@ Infine l’utente potrà visionare e monitorare l’andamento della caldaia graz
 
 ## Collegamento agli altri componenti
 I collegamenti con tutti i componenti del progetto sono:
-- [WOT-RaspberryBoile](https://github.com/UniSalento-IDALab-IoTCourse-2022-2023/WOT-RaspberryBoile)
+- [WOT-RaspberryBoiler](https://github.com/UniSalento-IDALab-IoTCourse-2022-2023/WOT-RaspberryBoile)
 - [WOT-Gateway](https://github.com/UniSalento-IDALab-IoTCourse-2022-2023/WOT-Gateway)
 - [WOT-monitoring-be](https://github.com/UniSalento-IDALab-IoTCourse-2022-2023/WOT-monitoring-be)
 - [WOT-monitoring-fe](https://github.com/UniSalento-IDALab-IoTCourse-2022-2023/WOT-monitoring-fe)
